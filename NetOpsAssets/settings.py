@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-f3qha9=5e-%w12f556_ywa-72@0t709v0p)p9=d#li+3hf8r%6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost"]
 
 
 # Application definition
@@ -119,7 +119,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-        'NAME': 'NetOpsNornir',
+        'NAME': 'NetOpsAssets',
         'USER': 'root',
         'PASSWORD': '123456'
     }, 'smartoffice': {
