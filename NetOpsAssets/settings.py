@@ -11,22 +11,21 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os,datetime
+import os, datetime
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f3qha9=5e-%w12f556_ywa-72@0t709v0p)p9=d#li+3hf8r%6'
+SECRET_KEY = 'django-insecure-889(bq5hlpp0=(lm$0qinrac=8k(xu^c&y93l7)mpa@$3t2$6%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost"]
-
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # Application definition
 
@@ -103,7 +102,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'NetOpsAssets.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 '''
@@ -122,7 +120,7 @@ DATABASES = {
         'NAME': 'NetOpsAssets',
         'USER': 'root',
         'PASSWORD': '123456'
-    }, 'smartoffice': {
+    }, 'NetOpsBase': {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '127.0.0.1',
         'PORT': '3306',
@@ -140,7 +138,6 @@ DATABASE_APPS_MAPPING = {
     'django': 'NetOpsBase',
     'app': 'default',
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -160,7 +157,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -170,11 +166,10 @@ USE_I18N = True  # 默认为True，是否启用自动翻译系统
 USE_L10N = True  # 默认False，以本地化格式显示数字和时间
 USE_TZ = False  # 默认值True。若使用了本地时间，必须设为False
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-MEDIA_URL = '/Users/congxingwang/pythoncode/NetOpsBase/media/' # 生产环境为nas 盘位置
+MEDIA_URL = '/Users/congxingwang/pythoncode/NetOpsBase/media/'  # 生产环境为nas 盘位置
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
@@ -184,13 +179,12 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 # REST_FRAMEWORK JWT 验证
 REST_FRAMEWORK = {
     # 设置所有接口都需要被验证
     'DEFAULT_PERMISSION_CLASSES': (
-        #'rest_framework.permissions.IsAuthenticated',  #建议是特定接口特定认证
-        #'rest_framework.permissions.AllowAny',
+        # 'rest_framework.permissions.IsAuthenticated',  #建议是特定接口特定认证
+        # 'rest_framework.permissions.AllowAny',
     ),
     # 分页配置
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',

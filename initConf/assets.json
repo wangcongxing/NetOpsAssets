@@ -1,0 +1,30 @@
+[
+  {
+    "deviceNumber": "sz-000001",
+    "ip": "10.32.1.1",
+    "mip": "10.32.1.1",
+    "port": 22,
+    "device_type": "hp_comware"
+  },
+  {
+    "deviceNumber": "sz-000002",
+    "ip": "10.32.1.2",
+    "mip": "10.32.1.2",
+    "port": 22,
+    "device_type": "hp_comware"
+  },
+  {
+    "deviceNumber": "sz-000003",
+    "ip": "10.32.1.3",
+    "mip": "10.32.1.3",
+    "port": 22,
+    "device_type": "hp_comware"
+  },
+  {
+    "deviceNumber": "sz-000004",
+    "ip": "10.32.4.1",
+    "mip": "10.32.4.1",
+    "port": 22,
+    "device_type": "hp_comware"
+  }
+]

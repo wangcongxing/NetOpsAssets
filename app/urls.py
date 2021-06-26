@@ -5,6 +5,9 @@ from app import views
 
 router = DefaultRouter()  # 可以处理视图的路由器
 
+router.register(r'networkAssets', views.networkAssetsViewSet)  # 菜单管理
+router.register(r'orgAssets', views.orgAssetsViewSet)  # 菜单管理
+
 
 urlpatterns = [
     # 默认数据初始化
