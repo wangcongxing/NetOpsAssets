@@ -8,7 +8,7 @@ class networkAssetsFilter(filters.FilterSet):
     # 模糊过滤
     deviceNumber = django_filters.CharFilter(field_name="deviceNumber", lookup_expr='icontains')
     ip = django_filters.CharFilter(field_name="ip", lookup_expr='icontains')
-    mip = django_filters.CharFilter(field_name="ip", lookup_expr='mip')
+    mip = django_filters.CharFilter(field_name="mip", lookup_expr='icontains')
 
     class Meta:
         model = models.networkAssets
